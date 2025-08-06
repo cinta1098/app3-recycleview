@@ -44,24 +44,32 @@ Dengan fitur daur ulang tampilan, RecyclerView memungkinkan aplikasi tetap ringa
 ![4a](https://github.com/user-attachments/assets/b11a8e12-a093-442d-b281-ced5de757217)
 ![5a](https://github.com/user-attachments/assets/4e646985-46e7-4721-97cc-92dbb3385708)
 ![6a](https://github.com/user-attachments/assets/7415fa77-eb42-4558-bd18-fd546d3fce89)
+
+
 1.Adapter & ViewHolder
 StudentAdapter digunakan untuk menghubungkan data studentList ke RecyclerView.
 ViewHolder menampung tampilan nama, NIS, kelas, dan tombol Edit & Hapus.
+
 2.onBindViewHolder
 Menampilkan data siswa ke tampilan TextView, dan memberi aksi saat item diklik (buka detail).
+
 3.filterList(query: String)
 Menyaring data berdasarkan nama siswa (fitur pencarian).
+
 4.sortByName()
 Mengurutkan data siswa berdasarkan nama.
+
 5.Edit Data (btnEdit)
 •Menampilkan dialog edit.
 •Setelah disimpan, data diperbarui di list dan RecyclerView di-refresh.
+
 6.Hapus Data (btnDelete)
 •Menampilkan dialog konfirmasi.
 •Jika ya, data dihapus dan list diperbarui.
 
 ## detailactivity.kt
 ![1b](https://github.com/user-attachments/assets/e291d0d9-9a35-4a7c-b9cb-8df690f231df)
+
 •Program ini dijalankan saat DetailActivity dibuka.
 •Data siswa yang dikirim dari layar sebelumnya akan diambil (intent.getStringExtra(...)).
 •Data tersebut akan ditampilkan ke 3 kolom teks: Nama, NIS, dan Kelas.
@@ -72,7 +80,8 @@ Mengurutkan data siswa berdasarkan nama.
 ![3c](https://github.com/user-attachments/assets/717a9960-e425-47ba-9fe1-60e7da5a386f)
 ![4c](https://github.com/user-attachments/assets/82fd3762-e963-4c04-953f-bddc9a7874fb)
 ![5c](https://github.com/user-attachments/assets/277a26ea-7e21-4344-8e98-b3f116cfad0c)
-1. Merupakan activity utama yang menampilkan daftar siswa.
+
+1. Merupakan activity utama yang menampilkan daftar siswa.  
 2. Variabel Utama:
 • recyclerView: Menampilkan daftar data siswa
 • adapter: Adapter khusus untuk siswa (StudentAdapter)
@@ -89,13 +98,14 @@ Saat tombol “Tambah” ditekan:
 • User mengisi nama, nis, dan kelas.
 • Jika tidak kosong, data akan ditambahkan ke studentList.
 • RecyclerView otomatis diperbarui.
-7. Fitur Pencarian
+8. Fitur Pencarian
 Terdapat EditText bernama searchEditText:
 • Saat user mengetik, akan mem-filter isi daftar berdasarkan keyword pencarian.
 • Pencarian bekerja secara real-time
 
 ## activity_detail.xml
 ![1d](https://github.com/user-attachments/assets/c90f9da2-b1ea-4ce0-a315-c745d198226e)
+
 Menampilkan halaman detail siswa berupa:
 • Judul “Biodata Siswa”
 • Foto siswa (icon)
@@ -131,6 +141,7 @@ c. tvKelas
 
 ## activitymain.xml
 ![1e](https://github.com/user-attachments/assets/9102d353-a577-498c-95ca-e4ae96b9248d)
+
 1. LinearLayout
 • Menampung EditText dan Button secara vertikal
 • Padding: 16dp
@@ -147,6 +158,7 @@ Kolom pencarian siswa
 
 ## dialog_add_student.xml
 ![1f](https://github.com/user-attachments/assets/29cb9850-c0dd-4b9c-b071-940a39141ce6)
+
 - Dialog Tambah Siswa
 Layout ini digunakan untuk form input saat ingin menambahkan data siswa baru.
 -Terdapat 3 Kolom Isian:
@@ -162,6 +174,7 @@ Isian dari ketiga kolom ini akan digunakan untuk menambahkan data baru ke daftar
 
 ## dialog_edit.xml
 ![1g](https://github.com/user-attachments/assets/7ab15c6d-6a56-4649-8287-1ec301b43b96)
+
 -Isi Form:
 1.Input Nama
 • Untuk memasukkan nama siswa.
@@ -181,6 +194,8 @@ Isian dari ketiga kolom ini akan digunakan untuk menambahkan data baru ke daftar
 ## item_student.xml
 ![1j](https://github.com/user-attachments/assets/67f5a6f7-66e4-42b1-bf5a-ed28517fd53c)
 ![2j](https://github.com/user-attachments/assets/bba074e1-3ec0-4dac-8911-839f274b0725)
+
+
 1.Gambar/Foto Siswa
 • Terletak di sebelah kiri dengan ukuran kecil (48dp).
 • Gambar diambil dari folder drawable.
